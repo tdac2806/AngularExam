@@ -1,2 +1,1 @@
-<app-statistique [statistique]=StatTeslaS></app-statistique>
-<app-statistique [statistique]=StatTesla3></app-statistique>
+<app-statistique *ngFor="let statistique of tableaustatistique" [statistique]="statistique"></app-statistique>
