@@ -9,12 +9,15 @@ import { Appreciation } from "./models/appreciation.enum";
 export class AppComponent {
    title = 'AngularExam';
 
-   public StatTeslaS = new Statistique("698aecbd-be3b-11eb-6978-1698763afecb", "Tesla Model S", "89990 €", Appreciation.WARNING);
-   public StatTesla3 = new Statistique("65acfe25-ab58-1258-91ec-7f5875ecfb46", "Tesla Model 3", "43800 €", Appreciation.SUCCESS);
-
-   public tableaustatistique : Statistique [] = [
-      this.StatTeslaS,
-      this.StatTesla3,
-      {id :"4589645-ab58-1258-91ec-789632145687", title:"Tesla Model Y", value:"63000 €", appreciation:Appreciation.SUCCESS}  //Ajout d'une statistique pour ex4
+   public tableaustatistique: Statistique[] = [
+      new Statistique("698aecbd-be3b-11eb-6978-1698763afecb", "Tesla Model S", "89990 €", Appreciation.WARNING),
+      new Statistique("65acfe25-ab58-1258-91ec-7f5875ecfb46", "Tesla Model 3", "43800 €", Appreciation.SUCCESS)
    ]
+
+   ngOnInit() {
+      setTimeout(() => {
+         this.tableaustatistique.push(new Statistique("4589645-ab58-1258-91ec-789632145687", "Tesla Model Y", "63000 €", Appreciation.SUCCESS));
+      }, 2000);
+   }
+
 }
