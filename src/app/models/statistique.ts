@@ -1,6 +1,10 @@
+import { Appreciation } from "./appreciation.enum";
 export class Statistique {
-   constructor(public titre: string, 
-     public prix: string) {
+   constructor(
+     public id: string, 
+     public title: string, 
+     public value: string,   
+     public appreciation: Appreciation) {
        
    }    
  }

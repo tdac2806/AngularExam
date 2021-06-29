@@ -17,9 +17,5 @@ export class StatistiqueComponent implements OnInit {
    ngOnInit(): void {
    }
 
-
-  public StatTeslaS = new Statistique("Tesla Model S", "89990 €");
-  public StatTesla3 = new Statistique("Tesla Model 3", "43800 €");
-
 }
 
